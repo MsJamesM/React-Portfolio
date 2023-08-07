@@ -10,7 +10,7 @@ const About = () => {
       <Header />
       <div class="mainDivs">
         <h1>About Page</h1>
-        <Link to="/">Landing</Link>
+        <Link to="/react-portfolio">Landing</Link>
         <Footer />
       </div>
     </>
