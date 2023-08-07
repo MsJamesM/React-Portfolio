@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/react-portfolio" element={<Landing />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/credentials" element={<Credentials />} />
