@@ -1,23 +1,34 @@
-/* dark gray social media links at the top of page, even on landing */
-
-import React from "react";
-import { GitHub, Linkedin, Instagram, AtSign } from "react-feather";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuVisible(!isMenuVisible);
+  };
+
+  const closeMenu = () => {
+    setIsMenuVisible(false);
+  };
+
   return (
     <header>
-      <a href="https://github.com" target="_blank" rel="noreferrer">
-        <GitHub size={26} id="headerIcons" />
-      </a>
-      <a href="https://Linkedin.com" target="_blank" rel="noreferrer">
-        <Linkedin size={26} id="headerIcons" />
-      </a>
-      <a href="https://Instagram.com" target="_blank" rel="noreferrer">
-        <Instagram size={26} id="headerIcons" />
-      </a>
-      <a href="https://Outlook.com" target="_blank" rel="noreferrer">
-        <AtSign size={26} id="headerIcons" />
-      </a>
+      <p id="headerName">Madeline Moore Portfolio</p>
+      <FontAwesomeIcon
+        icon={faBars}
+        id="headerNavBars"
+        size="2x"
+        onClick={isMenuVisible ? closeMenu : toggleMenu}
+      />
+      <div className={`menuLinks ${isMenuVisible ? "menuVisible" : ""}`}>
+        <Link to="/about">About</Link>
+        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/resume">Resume</Link>
+        <Link to="/contact">Contact</Link>
+      </div>
     </header>
   );
 };

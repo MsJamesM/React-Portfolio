@@ -2,9 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Credentials from "./pages/Credentials";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
 import "./styles/styles.css";
+
+// change "react-portfolio" to /, but change back to push
 
 function App() {
   return (
@@ -13,8 +16,9 @@ function App() {
         <Routes>
           <Route path="/react-portfolio" element={<Landing />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/credentials" element={<Credentials />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </div>
     </Router>
