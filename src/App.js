@@ -7,8 +7,6 @@ import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 import "./styles/styles.css";
 
-// change "react-portfolio" to /, but change back to push
-
 function App() {
   return (
     <Router>
